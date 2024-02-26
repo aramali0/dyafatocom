@@ -1,0 +1,127 @@
+/* OfferCard.module.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .offerCard {
+    width: 300px;
+    min-width: 300px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+    height: 320px; /* Updated height to accommodate additional details */
+    color: black;
+  }
+  
+  .offerCard:hover {
+    transform: scale(1.1);
+  }
+  
+  .offerImgSrc {
+    width: 100%; /* Updated to occupy full width of container */
+    height: 160px;
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 10px 10px 0 0; /* Rounded corners only on top */
+  }
+  
+  .offerInfo {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .offerRatingPrice {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .offerRating {
+    display: flex;
+  }
+  
+  .startRatoffer {
+    color: #ffd60a;
+  }
+  
+  .offerName {
+    font-size: 21px;
+    font-weight: 800;
+  }
+  
+  .offerPrice {
+    font-weight: 700;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .offerDetails {
+    margin-top: 10px;
+  }
+  
+  .offerDetails p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .offerDetails p:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .servicesButton {
+    display: inline-block;
+    background-color: lightgray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  
+  .offerImage {
+    position: relative;
+  }
+  
+  .offerImage button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5); 
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333; 
+    border-radius: 50%;
+  }
+  
+  .offerImage button:hover {
+    background: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+  }
+  
+  .offerImage .buttonLeft {
+    left: 0;
+  }
+  
+  .offerImage .buttonRight {
+    right: 0;
+  }
+    
+  .offerImage:hover button {
+    display: block;
+  }
+  
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  

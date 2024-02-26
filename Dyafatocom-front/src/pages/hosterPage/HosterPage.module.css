@@ -1,0 +1,15 @@
+.header{
+ width:100%;
+ margin-bottom: 20px;
+}
+
+.body{
+ width:100;
+}
+
+.offers{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin: 20px 30px;
+}
