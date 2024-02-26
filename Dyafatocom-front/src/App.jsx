@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import Navbar from './NavBar'
+import HosterPage from './pages/hosterPage/HosterPage'
 
 
 function App() {
 
   return (
     <>
-     <Navbar/>
+     {/* <Navbar/> */}
+     <HosterPage/>
     </>
   )
 }
