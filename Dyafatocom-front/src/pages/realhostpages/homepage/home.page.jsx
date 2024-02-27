@@ -1,11 +1,12 @@
-
-
-
+import FormInputOffer from '../../../components/realhostComponenets/forminputOffer/form.offer';
 import ImageSlider from '../../../components/realhostComponenets/slider/image.slider';
 import './home.css';
 
 function HomePageTouriste() {
-    const isEmpty = true;
+    const showForm = ()=>{
+        document.querySelector('.offer-input-home').classList.toggle('active')
+    }
+    const isEmpty = false;
     return ( <>
          {
             isEmpty ? 
@@ -41,9 +42,14 @@ function HomePageTouriste() {
                     </ul>
                 </div>
                 </div>
-                
             </div>
-            : <h1>Not empty</h1>
+            : <div className='add-new-offer'>
+                <div className='image' onClick={showForm} ><img src="src/assets/plus.png" alt="" srcset="" /></div>
+                <div className='info'>You have no offers try to add one !</div>
+                <div className="offer-input-home">
+                <FormInputOffer/>
+                </div>
+            </div>
         }
     </> );
 }

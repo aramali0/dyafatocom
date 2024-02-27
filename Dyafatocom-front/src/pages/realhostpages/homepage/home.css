@@ -72,3 +72,32 @@
     height: 20px;
     margin-left: 35px;
 }
+
+.add-new-offer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.add-new-offer img{
+    width: 270px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.add-new-offer .info{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+    
+
+.offer-input-home.active{
+    display: block;
+}
+
+.offer-input-home{
+    display: none;
+}
