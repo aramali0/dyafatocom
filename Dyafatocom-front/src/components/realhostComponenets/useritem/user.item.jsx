@@ -1,12 +1,12 @@
 
 import './user.item.css'
 
-function UserItem({username, status, lastmessage, date}) {
+function UserItem({username, status, lastmessage, date, image}) {
     return ( 
     <div className='user-item-container'>
         
         <div className="user-item-info">
-            <div className="user-item-image"><img src="src/assets/logo.png" alt="" srcset="" /></div>
+            <div className="user-item-image"><img src={image} alt="" srcset="" /></div>
             <div>
                 <div className="user-item-username">{username}</div>
                 <div className="user-item-last-message">{lastmessage}</div>

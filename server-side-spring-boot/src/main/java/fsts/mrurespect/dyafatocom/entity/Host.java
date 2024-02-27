@@ -11,7 +11,6 @@ import java.util.List;
 @Table(name = "user")
 @Entity
 @DiscriminatorValue("HOST")
-
 public class Host extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +35,7 @@ public class Host extends User {
     private List<Language> languages ;
 
     @Enumerated(EnumType.STRING)
-    private List<Service> services ;
+    private List<Service> services;
     private  int rating ;
 
 

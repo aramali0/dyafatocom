@@ -20,5 +20,4 @@ public class Familly {
     private Sexe sexe ;
     @Enumerated(EnumType.STRING)
     private Gender gender ;
-
 }

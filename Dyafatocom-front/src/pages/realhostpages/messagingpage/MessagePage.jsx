@@ -9,41 +9,13 @@ function MessagePage() {
                 <label htmlFor="search-user"><img src="src/assets/search.png" alt="" srcset="" /></label>
             </div>
             <div className="users-list">
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
-                <UserItem username="Otmane" lastmessage="Hi there .." status="online" date="16:20" />
+                <UserItem image="src/assets/profile.jpg" username="Otmane" lastmessage="Hi there " status="online" date="17:20" />
+                <UserItem image="src/assets/profile.jpg" username="Salah" lastmessage="How are you" status="online" date="09:20" />
+                <UserItem image="src/assets/profile.jpg" username="Driss" lastmessage="Welcome !" status="offline" date="06:34" />
+                <UserItem image="src/assets/profile.jpg" username="Mohamed Fadili" lastmessage="Jib l khobz" status="online" date="17:22" />
+                <UserItem image="src/assets/profile.jpg" username="Aramali" lastmessage="Cv bikher" status="away" date="19:29" />
+                <UserItem image="src/assets/profile.jpg" username="Soufiane" lastmessage="chat service" status="online" date="12:00" />
+                
             </div>
         </div>
         <div className="chat-right-side">

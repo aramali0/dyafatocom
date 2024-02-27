@@ -28,8 +28,4 @@ public class Offer {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "offer-id")
     private Host host;
-
-
-
-
 }
