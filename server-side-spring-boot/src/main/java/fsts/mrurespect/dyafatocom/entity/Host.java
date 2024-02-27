@@ -2,16 +2,19 @@ package fsts.mrurespect.dyafatocom.entity;
 
 import fsts.mrurespect.dyafatocom.Enums.Service;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
-@Table(name = "user")
+@Table(name = "hosters")
 @Entity
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Host extends User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Column
     private String cin ;
     @Column
@@ -19,12 +22,9 @@ public class Host extends User {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "host_id")
     private List<Language> languages ;
-
     @Enumerated(EnumType.STRING)
     private List<Service> services ;
     private  int rating ;
-    @Id
-    private Long id;
 
 
 
