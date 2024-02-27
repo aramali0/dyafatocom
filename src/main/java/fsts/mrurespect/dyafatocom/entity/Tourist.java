@@ -1,24 +1,48 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "tourist")
-@Getter
-@Setter
-public class Tourist extends User{
+@DiscriminatorValue("TOURIST")
+public class Tourist extends User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Column
     private String country ;
     @Column
     private String numPassport ;
-    @Id
-    private Long id;
 
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getNumPassport() {
+        return numPassport;
+    }
+
+    public void setNumPassport(String numPassport) {
+        this.numPassport = numPassport;
+    }
 }

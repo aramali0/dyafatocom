@@ -1,13 +1,13 @@
 package fsts.mrurespect.dyafatocom.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Table(name = "language")
 @Entity
 public class Language {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
     public void setId(Long id) {

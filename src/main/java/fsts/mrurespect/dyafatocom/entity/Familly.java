@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class Familly {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
     @Enumerated(EnumType.STRING)
