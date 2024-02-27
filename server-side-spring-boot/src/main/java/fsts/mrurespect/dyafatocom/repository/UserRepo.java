@@ -2,6 +2,8 @@ package fsts.mrurespect.dyafatocom.repository;
 
 import fsts.mrurespect.dyafatocom.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserRepo extends JpaRepository<User,Long> {
 }

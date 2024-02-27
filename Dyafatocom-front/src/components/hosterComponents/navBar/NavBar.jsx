@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./NavBar.module.css"
 import img from "../../../assets/logo.png"
+import img2 from "../../../assets/profile.jpg"
 
 function Navbar() {
+  const [showDetails, setShowDetails] = useState(false);
+
+  // Function to toggle showing user details
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
+  // Function to handle logout
+  const handleLogout = () => {
+    // Implement your logout logic here
+    console.log("Logout clicked");
+  };
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar}  >
       <div className={styles.container}>
         <a href="/" className={styles.navbarBrand}><img className={styles.logo} src={img} /></a>
         <ul className={styles.navbarNav}>
@@ -21,9 +35,27 @@ function Navbar() {
             <a href="/contact" className={styles.navLink}>Contact</a>
           </li>
         </ul>
-        <div className={styles.navbarButtons}>
-
-          <button className={`${styles.btn} ${styles.btnSecondary}`}>Log In</button>
+        <div className={styles.navbarProfile}>
+          <img 
+            src={img2} 
+            alt="profile image" 
+            className={styles.profileImage} 
+            onClick={toggleDetails} 
+          />
+          {/* Conditionally render user details */}
+          {showDetails && (
+            <div className={styles.userDetails}>
+              <button onClick={toggleDetails} className={styles.closeButton}>X</button>
+              <img 
+                src={img2} 
+                alt="profile image" 
+                className={styles.profileImage} 
+              />
+              <p>Name: John Doe</p>
+              <p>Email: johndoe@example.com</p>
+              <button onClick={handleLogout} className={styles.button}>Logout</button>
+            </div>
+          )}
         </div>
       </div>
     </nav>

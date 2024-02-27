@@ -5,6 +5,7 @@ import FilterComponent from '../../components/hosterComponents/filtre/FiltreComp
 import { cities } from '../../contants'
 import { services } from '../../contants'
 import styles from "./HosterPage.module.css"
+import Footer from '../../components/hosterComponents/footer/Footer'
 function HosterPage() {
 
 
@@ -38,6 +39,9 @@ function HosterPage() {
      <OfferCard offer={offer}/>
      <OfferCard offer={offer}/>
      <OfferCard offer={offer}/>
+    </div>
+    <div className={styles.footer}>
+      <Footer/>
     </div>
    </div>
    </>
