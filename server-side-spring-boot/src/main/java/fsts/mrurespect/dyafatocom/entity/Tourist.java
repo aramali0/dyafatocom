@@ -1,9 +1,15 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 
+
 import fsts.mrurespect.dyafatocom.Enums.Sexe;
+
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
+
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
@@ -11,16 +17,26 @@ import java.util.List;
 @Table(name = "tourists")
 @Data
 @NoArgsConstructor
+@DiscriminatorValue("TOURIST")
 public class Tourist extends User{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Column
     private String country ;
     @Column
     private String numPassport ;
 
-    public Tourist(String nom, String prenom, String tel, Sexe sexe, int age, String email, List<Familly> famillieMembers, Long id, String country, String numPassport) {
-        super(nom, prenom, tel, sexe, age, email, famillieMembers, id);
-        this.country = country;
-        this.numPassport = numPassport;
-    }
+
 }

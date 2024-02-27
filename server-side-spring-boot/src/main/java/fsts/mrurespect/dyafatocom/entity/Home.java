@@ -1,14 +1,13 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Builder
-@Table(name = "homes")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "home")
+@Getter
+@Setter
 public class Home {
     @Column
     private String adresse ;
@@ -17,8 +16,8 @@ public class Home {
     @Column
     private int numRooms ;
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
 }

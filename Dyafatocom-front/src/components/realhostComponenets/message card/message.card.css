@@ -1,0 +1,47 @@
+.message-container{
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    margin: 5px;
+    min-height: 66px;
+}
+.second-message-container{
+    overflow: scroll;
+    padding: 10px;
+    position: relative;
+    max-width: 60%;
+    min-width: 30%;
+    min-height: 66px;
+    max-height: 100px;
+    
+
+}
+.second-message-container::-webkit-scrollbar{
+    display: none;
+}
+.second-message-container.send{
+    background-color: #2a9d8f;
+    color: white;
+    position: absolute;
+    right:  0;
+    border-radius: 20px 20px 0px 20px;
+    margin-right: 10px;
+}
+
+.second-message-container.receive{
+    background-color: #00b4d8;
+    border-radius: 20px 20px 20px 0px;
+    color: white;
+}
+
+.second-message-container .message-text{
+    font-weight: 600;
+    font-size: 17px;
+}
+.second-message-container .date{
+    font-weight: 700;
+    font-size: 9px;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+}

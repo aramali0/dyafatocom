@@ -1,6 +1,6 @@
 package fsts.mrurespect.dyafatocom.repository;
 
-import fsts.mrurespect.dyafatocom.entity.User;
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

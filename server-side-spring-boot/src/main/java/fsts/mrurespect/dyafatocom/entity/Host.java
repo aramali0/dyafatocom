@@ -1,18 +1,22 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 import fsts.mrurespect.dyafatocom.Enums.Service;
-import fsts.mrurespect.dyafatocom.Enums.Sexe;
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Table(name = "hosters")
+@Table(name = "user")
 @Entity
+@DiscriminatorValue("HOST")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Host extends User {
+
     @Column
     private String cin ;
     @Column
@@ -20,16 +24,9 @@ public class Host extends User {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "host_id")
     private List<Language> languages ;
+
     @Enumerated(EnumType.STRING)
     private List<Service> services ;
     private  int rating ;
 
-    public Host(String nom, String prenom, String tel, Sexe sexe, int age, String email, List<Familly> famillieMembers, Long id, String cin, String description, List<Language> languages, List<Service> services, int rating) {
-        super(nom, prenom, tel, sexe, age, email, famillieMembers, id);
-        this.cin = cin;
-        this.description = description;
-        this.languages = languages;
-        this.services = services;
-        this.rating = rating;
-    }
 }

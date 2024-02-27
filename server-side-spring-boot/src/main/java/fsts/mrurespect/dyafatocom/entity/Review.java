@@ -27,5 +27,4 @@ public class Review {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "tourist-id")
     private Tourist tourist;
-
 }

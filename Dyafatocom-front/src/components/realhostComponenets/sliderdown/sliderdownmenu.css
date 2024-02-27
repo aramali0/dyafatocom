@@ -1,0 +1,42 @@
+.slidedown-card{
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    padding: 5px;
+    width: 400px;
+    background-color:white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.slidedown-card-item{
+    margin-top: 10px
+}
+
+.slidedown-card-title{
+    font-weight: 700;
+
+}
+.slidedown-card-description{
+    font-weight: 100;
+}
+.slidedown-card-date{
+    font-weight: 200;
+    color: rgb(134, 127, 127);
+}
+
+.slidedown-card-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.slidedown-card-item .image-wrapper img {
+    background-color: rgb(215, 206, 206);
+    height:50px;
+    padding: 10px;
+    border-radius: 50px;
+}
