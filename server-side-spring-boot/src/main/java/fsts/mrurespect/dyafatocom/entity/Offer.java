@@ -20,16 +20,18 @@ public class Offer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id-offer")
     private Long id;
+    private String titre;
     private String describtion;
     private Date date;
     private int maxDuraion;
     private Service service;
     private City city;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "offer-id")
+    @JoinColumn(name = "host-id")
     private Host host;
 
-    public Offer(String describtion, Date date, int maxDuraion, Service service, City city, Host host) {
+    public Offer(String titre, String describtion, Date date, int maxDuraion, Service service, City city, Host host) {
+        this.titre = titre;
         this.describtion = describtion;
         this.date = date;
         this.maxDuraion = maxDuraion;

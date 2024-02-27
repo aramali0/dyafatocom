@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/hosterComponents/navBar/NavBar'
 import OfferCard from '../../components/hosterComponents/offer-card/OfferCard'
 import FilterComponent from '../../components/hosterComponents/filtre/FiltreComponent'
@@ -6,7 +6,22 @@ import { cities } from '../../contants'
 import { services } from '../../contants'
 import styles from "./HosterPage.module.css"
 import Footer from '../../components/hosterComponents/footer/Footer'
+import axios from 'axios'
 function HosterPage() {
+  const [selectedCity,setSelectedCity] = useState("");
+  const [selectedService,setSelectedService] = useState("");
+  const [offers,setOffers] = useState([]);
+  const [profile,setProfile] = useState();
+  const url = `http://localhost:8080/api/tourist/offers?city=${selectedCity}&service=${selectedService}`
+  
+useEffect(()=>{
+axios.get(url)
+.then((res) =>{
+  setOffers(res.data)
+  console.log(res);
+})
+
+},[selectedCity,selectedService])
 
 
  const offer = {
@@ -32,13 +47,15 @@ function HosterPage() {
    <div className={styles.body}>
     <FilterComponent cities={cities} services={services} handleFilter={handleFilter}/>
     <div className={styles.offers}>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
-     <OfferCard offer={offer}/>
+    {
+      offers.length === 0 ?
+      <h2>this service or city doent existe</h2>
+      :
+      offers.map((offer)=>(
+        <OfferCard key={offer.id} offer={offer}/>
+      ))
+    }
+     
     </div>
     <div className={styles.footer}>
       <Footer/>

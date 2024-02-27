@@ -12,9 +12,7 @@ import java.util.List;
 @Repository
 public interface OfferRepo extends JpaRepository<Offer,Long> {
 
-    @Query("SELECT o FROM Offer o WHERE " +
-            "o.service = :service " +
-            "AND  o.city = :city")
+    @Query("SELECT o FROM Offer o WHERE (:city IS NULL OR o.city = :city) AND (:service IS NULL OR o.service = :service)")
     List<Offer> findByServiceAndCityIgnoreCase(@Param("service") Service service, @Param("city") City city);
 
 }

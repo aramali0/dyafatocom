@@ -20,8 +20,9 @@ function OfferCard({ offer }) {
     );
   };
 
+  const dateDebut = new Date(offer.date);
   // Convert date to a readable format
-  const formattedDate = offer.dateDebut.toLocaleDateString("en-US", {
+  const formattedDate = dateDebut.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -57,14 +58,14 @@ function OfferCard({ offer }) {
         </div>
         <div className={styles.offerDetails}>
           <p className={styles.offerDateMaxDuration}>
-            Date: {formattedDate} | Max Duration: {offer.maxDuration} days
+            Date: {formattedDate} | Max Duration: {offer.maxDuraion} days
           </p>
           <div className={styles.services}>
-            {offer.services.map((service, index) => (
-              <button key={index} className={styles.servicesButton}>
-                {service}
+            
+              <button className={styles.servicesButton}>
+                {offer.service}
               </button>
-            ))}
+          
           </div>
         </div>
       </div>

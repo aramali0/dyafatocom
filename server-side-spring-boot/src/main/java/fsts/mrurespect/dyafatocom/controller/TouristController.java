@@ -5,14 +5,13 @@ import fsts.mrurespect.dyafatocom.Enums.Service;
 import fsts.mrurespect.dyafatocom.entity.Offer;
 import fsts.mrurespect.dyafatocom.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/tourist")
+@CrossOrigin
 public class TouristController {
 
     private final OfferService offerService;
@@ -26,6 +25,7 @@ public class TouristController {
     public List<Offer> getOffersByServiceAndCity(
             @RequestParam(name = "service", defaultValue = "") String service,
             @RequestParam(name = "city", defaultValue = "") String city) {
+        System.out.println(offerService.getOffers(service, city));
         return offerService.getOffers(service, city);
     }
 
