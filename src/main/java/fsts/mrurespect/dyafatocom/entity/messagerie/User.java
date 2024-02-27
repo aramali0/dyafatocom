@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import fsts.mrurespect.dyafatocom.Enums.Sexe;
 import fsts.mrurespect.dyafatocom.entity.Familly;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
