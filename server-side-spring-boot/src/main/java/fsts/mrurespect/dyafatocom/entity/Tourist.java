@@ -1,14 +1,24 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 
-import fsts.mrurespect.dyafatocom.entity.messagerie.User;
-import jakarta.persistence.*;
 
+import fsts.mrurespect.dyafatocom.Enums.Sexe;
+
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+import java.util.List;
 
 @Entity
-@Table(name = "tourist")
+@Table(name = "tourists")
+@Data
+@NoArgsConstructor
 @DiscriminatorValue("TOURIST")
-public class Tourist extends User {
+public class Tourist extends User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -29,19 +39,4 @@ public class Tourist extends User {
     private String numPassport ;
 
 
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getNumPassport() {
-        return numPassport;
-    }
-
-    public void setNumPassport(String numPassport) {
-        this.numPassport = numPassport;
-    }
 }

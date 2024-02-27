@@ -1,5 +1,6 @@
 package fsts.mrurespect.dyafatocom.entity;
 
+import fsts.mrurespect.dyafatocom.Enums.City;
 import fsts.mrurespect.dyafatocom.Enums.Service;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,11 +12,9 @@ import org.hibernate.annotations.CollectionId;
 import java.util.Date;
 
 @Entity
-@Builder
 @Table(name = "offers")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Offer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +24,17 @@ public class Offer {
     private Date date;
     private int maxDuraion;
     private Service service;
+    private City city;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "offer-id")
     private Host host;
 
-
-
-
+    public Offer(String describtion, Date date, int maxDuraion, Service service, City city, Host host) {
+        this.describtion = describtion;
+        this.date = date;
+        this.maxDuraion = maxDuraion;
+        this.service = service;
+        this.city = city;
+        this.host = host;
+    }
 }
