@@ -1,0 +1,74 @@
+.home-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+.left-container{
+    
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    
+    
+}
+.right-container{
+    margin-top: 30px;
+    width: 60%;
+    padding: 10px;
+}
+
+.home-container::-webkit-scrollbar{
+    display: none;
+}
+
+.offer-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.offer-description{
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.offer-services-items{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    cursor: default;
+    
+}
+.offer-service-item{
+    background-color: rgb(215, 205, 205);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.offer-services p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.offer-date-from{
+    display: flex;
+    align-items: center;
+}
+.offer-date-from input{
+    height: 20px;
+    margin-left: 10px;
+}
+.offer-date-to{
+    display: flex;
+    
+    align-items: center;
+}
+.offer-date-to input{
+    height: 20px;
+    margin-left: 35px;
+}

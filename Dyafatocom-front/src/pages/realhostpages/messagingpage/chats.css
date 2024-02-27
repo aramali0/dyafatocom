@@ -1,0 +1,115 @@
+.chat-container{
+    display: flex;
+    width: 100%;
+    height: 86vh;
+}
+
+
+.chat-left-side{
+    width: 30%;
+    overflow: scroll;
+    position: relative;
+    border: 1px solid black;
+}
+
+.chat-left-side::-webkit-scrollbar {
+    display: none;
+}
+.search-chat{
+    position: sticky;
+    top: 0;
+    padding: 10px 1px;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: 10px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+.search-chat input{
+    width: 80%;
+    outline: none;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 10px;
+
+}
+.search-chat label img{
+    cursor: pointer;
+    width: 30px;
+    margin-left: 2px;
+    margin-left: 10px;
+}
+
+
+
+
+
+.chat-right-side{
+    width: 70%;
+}
+
+.users-list{
+    margin: 10px;
+}
+
+.conversation-header{
+    display: flex;
+    height: 10vh;
+    
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    
+}
+
+.conversation-header img{
+    width: 60px;
+}
+
+.conversation-header .image-profile{
+    margin-left: 10px;
+}
+
+.conversation-header .user-name{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.messages-list{
+    position: relative;
+    min-height: 67vh;
+}
+
+.input-message-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.input-message-container .message-input{
+    width: 90%;
+}
+
+.input-message-container .message-input input{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+}
+
+.input-message-container .send-input{
+    background-color: #023e8a;
+    padding: 10px;
+    height: 80%;
+    width: 10%;
+    margin: auto 10px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
