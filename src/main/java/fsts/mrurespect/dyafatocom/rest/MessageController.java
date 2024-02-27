@@ -40,7 +40,8 @@ public class MessageController {
         if (session.getAttribute("user") != null) {
             return ResponseEntity.ok("connected" + session.getAttribute("user"));
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            throw new NotFoundException("Not connected ! ");
+           // return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
 
@@ -61,7 +62,8 @@ public class MessageController {
     @GetMapping("/conversations")
     public ResponseEntity<List<Conversation>> home(Model model,HttpSession session){
         if (session.getAttribute("user")==null){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+          //  return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            throw new NotFoundException("Not connected");
         }
         System.out.println("holla");
        User user=(User) session.getAttribute("user");
@@ -86,7 +88,8 @@ public class MessageController {
             messageService.addMessage(message);
             System.out.println("Received message: " + message);
             return ResponseEntity.ok().body("message added successfully");
-        }else return ResponseEntity.badRequest().build() ;
+
+        }else  throw new NotFoundException("Not connected");
 
     }
     @GetMapping("/")
