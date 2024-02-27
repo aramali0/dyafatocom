@@ -2,11 +2,18 @@ package fsts.mrurespect.dyafatocom.entity;
 
 import fsts.mrurespect.dyafatocom.Enums.Sexe;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Table(name = "user")
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Column
     private String nom ;
@@ -25,6 +32,7 @@ public class User {
 
     private List<Familly> famillieMembers ;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 }

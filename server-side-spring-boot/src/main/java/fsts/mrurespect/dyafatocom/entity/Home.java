@@ -1,16 +1,14 @@
 package fsts.mrurespect.dyafatocom.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@Table(name = "home")
-@Getter
-@Setter
+@Builder
+@Table(name = "homes")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Home {
     @Column
     private String adresse ;
@@ -20,6 +18,7 @@ public class Home {
     private int numRooms ;
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 }

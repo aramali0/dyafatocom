@@ -6,22 +6,26 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name = "languages")
-@Builder
 @Entity
+@Builder
+@Table(name = "reviews")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Language {
+public class Review {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private int rating;
+    private String comment;
 
-    public Long getId() {
-        return id;
-    }
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "review-id")
+    private Host host;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "tourist-id")
+    private Tourist tourist;
+
 }
