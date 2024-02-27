@@ -1,20 +1,13 @@
 package fsts.mrurespect.dyafatocom.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Table(name = "languages")
-@Builder
+@Table(name = "language")
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
     public void setId(Long id) {
