@@ -26,7 +26,7 @@ function ProfilePage() {
         <tr>
           <td>Tel :</td>
           <td>
-            <input type="text" className="form-control" value="06151414" />
+            <input type="text" className="form-control" value="+212 615256789" />
           </td>
         </tr>
         <tr>
@@ -36,10 +36,16 @@ function ProfilePage() {
           </td>
         </tr>
         <tr>
+          <td>Email :</td>
+          <td>
+            <input type="text" className="form-control" value="bachriotmane@gmail.com" />
+          </td>
+        </tr>
+        <tr>
           <td>Sex :</td>
           <td>
             <div className="form-check">
-              <input type="radio" className="form-check-input" value="Male" />
+              <input type="radio" className="form-check-input" defaultChecked value="Male" />
               <label className="form-check-label">Male</label>
             </div>
             <div className="form-check">
