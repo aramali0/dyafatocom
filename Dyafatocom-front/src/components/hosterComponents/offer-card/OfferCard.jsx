@@ -3,6 +3,7 @@ import { useState } from "react"; // Import useState hook
 import styles from "./OfferCard.module.css";
 import img from "../../../assets/offer-image.jpg";
 import img2 from "../../../assets/offer-image1.jpg";
+import { Link } from "react-router-dom";
 
 function OfferCard({ offer }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // State to keep track of current image index
