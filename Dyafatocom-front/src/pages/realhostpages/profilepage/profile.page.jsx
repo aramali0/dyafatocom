@@ -36,6 +36,12 @@ function ProfilePage() {
           </td>
         </tr>
         <tr>
+          <td>Age :</td>
+          <td>
+            <input type="text" className="form-control" value="27" />
+          </td>
+        </tr>
+        <tr>
           <td>Email :</td>
           <td>
             <input type="text" className="form-control" value="bachriotmane@gmail.com" />
@@ -52,6 +58,22 @@ function ProfilePage() {
               <input type="radio" className="form-check-input" value="Female" />
               <label className="form-check-label">Female</label>
             </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Languages :</td>
+          <td>
+            <ul>
+              <li>Frensh</li>
+              <li>Arabic</li>
+              <li>Spanish</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Description :</td>
+          <td>
+            <input className='form-control' type="text" value="Escape the ordinary and indulge in a truly exceptional family vacation at our exquisite home. We extend a warm invitation to families seeking a remarkable stay, where comfort, privacy, and cherished memories are guaranteed." />
           </td>
         </tr>
       </tbody>
