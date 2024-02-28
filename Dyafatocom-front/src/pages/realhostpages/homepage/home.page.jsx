@@ -9,7 +9,7 @@ function HomePageTouriste() {
     const isEmpty = false;
     return ( <>
         {
-            isEmpty ? 
+            !isEmpty ? 
             
             <div className="home-container">
                 <div className="left-container">
@@ -24,21 +24,19 @@ function HomePageTouriste() {
                     />
                 </div>
                 <div className="right-container">
-                    <div className="offer-title">Welcome to my best house you and your family you are the best</div>
-                    <div className='offer-description'>This is then description This is then description This is then description This is then description This is then description This is then description This is then description This is then description</div>
+                    <div className="offer-title">Unforgettable Adventures Await! Join us now !</div>
+                    <div className='offer-description'>Escape the ordinary and indulge in a truly exceptional family vacation at our exquisite home. We extend a warm invitation to families seeking a remarkable stay, where comfort, privacy, and cherished memories are guaranteed.</div>
                     <div className='offer-date-from'>
-                        <p>From : </p> <input type="date" />
+                        <p>From : </p> <input type="date" defaultValue={"2024-03-12"} />
                     </div>
                     <div className='offer-date-to'>
-                        <p>To : </p> <input type="date" />
+                        <p>To : </p> <input type="date" defaultValue={"2024-03-19"} />
                     </div>
                     <div className='offer-services'>
                         <p>Included : </p>
                     <ul className='offer-services-items'>
                         <li className='offer-service-item'>Sport</li>
                         <li className='offer-service-item'>Food</li>
-                        <li className='offer-service-item'>Gym</li>
-                        <li className='offer-service-item'>Holiday</li>
                     </ul>
                 </div>
                 </div>

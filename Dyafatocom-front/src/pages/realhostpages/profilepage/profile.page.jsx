@@ -4,7 +4,7 @@ function ProfilePage() {
     return ( <>
         <div className="profile-container">
             <div className="profile-left-column">
-                <div className="user-image"><img src="src/assets/logo.png" alt="" srcset="" /></div>
+                <div className="user-image"><img src="src/assets/traveler3.jpg" alt="" srcset="" /></div>
                 <div className="btn-logout">Logout</div>
             </div>
             <div className="profile-right-column">

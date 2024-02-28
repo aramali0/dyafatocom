@@ -14,6 +14,9 @@
 .user-item-image img{
     width: 50px;
     margin-right: 10px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .user-item-info{
@@ -28,4 +31,9 @@
 .user-date-status .user-item-status{
     color: #55a630;
     
+}
+
+.user-date-status .user-item-status.inactive{
+    color: black;
+
 }
