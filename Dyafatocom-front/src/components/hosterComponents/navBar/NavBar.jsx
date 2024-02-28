@@ -3,7 +3,7 @@ import styles from "./NavBar.module.css"
 import img from "../../../assets/logo.png"
 import img2 from "../../../assets/profile.jpg"
 
-function Navbar() {
+function Navbar({profile}) {
   const [showDetails, setShowDetails] = useState(false);
 
   // Function to toggle showing user details
@@ -51,8 +51,8 @@ function Navbar() {
                 alt="profile image" 
                 className={styles.profileImage} 
               />
-              <p>Name: John Doe</p>
-              <p>Email: johndoe@example.com</p>
+              <p>Name: {profile.name}</p>
+              <p>Email: {profile.email}</p>
               <button onClick={handleLogout} className={styles.button}>Logout</button>
             </div>
           )}

@@ -12,13 +12,20 @@ function HosterPage() {
   const [selectedService,setSelectedService] = useState("");
   const [offers,setOffers] = useState([]);
   const [profile,setProfile] = useState();
-  const url = `http://localhost:8080/api/tourist/offers?city=${selectedCity}&service=${selectedService}`
+  const id = 2;
+  const url1 = `http://localhost:8080/api/tourist/offers?city=${selectedCity}&service=${selectedService}`
+  const url2 = `http://localhost:8080/api/tourist/${id}`
   
 useEffect(()=>{
-axios.get(url)
+axios.get(url1)
 .then((res) =>{
   setOffers(res.data)
   console.log(res);
+})
+
+axios.get(url2)
+.then((res) =>{
+  setProfile(res.data)
 })
 
 },[selectedCity,selectedService])
@@ -37,12 +44,14 @@ axios.get(url)
  const handleFilter = (selectedCity, selectedService) =>{
   console.log("selectedCity : "+ selectedCity);
   console.log("selectedService : "+ selectedService);
+  setSelectedCity(selectedCity);
+  setSelectedService(selectedService);
  }
 
   return (
    <>
    <div className={styles.header}>
-    <Navbar/>
+    <Navbar profile={profile}/>
    </div>
    <div className={styles.body}>
     <FilterComponent cities={cities} services={services} handleFilter={handleFilter}/>
