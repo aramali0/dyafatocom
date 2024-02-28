@@ -2,9 +2,11 @@ package fsts.mrurespect.dyafatocom;
 
 import fsts.mrurespect.dyafatocom.Enums.City;
 import fsts.mrurespect.dyafatocom.Enums.Service;
+import fsts.mrurespect.dyafatocom.dao.UserDao;
 import fsts.mrurespect.dyafatocom.entity.Host;
 import fsts.mrurespect.dyafatocom.entity.Offer;
 import fsts.mrurespect.dyafatocom.entity.Tourist;
+import fsts.mrurespect.dyafatocom.entity.messagerie.User;
 import fsts.mrurespect.dyafatocom.repository.HostRepo;
 import fsts.mrurespect.dyafatocom.repository.OfferRepo;
 import fsts.mrurespect.dyafatocom.repository.TouristRepo;
@@ -24,7 +26,7 @@ public class DyafatocomApplication implements CommandLineRunner {
     }
 
 
-    private final UserRepo userRepo;
+    private final UserDao userRepo;
     private final HostRepo hostRepo;
     private final TouristRepo touristRepo;
     private final OfferRepo offerRepo;
@@ -64,6 +66,12 @@ public class DyafatocomApplication implements CommandLineRunner {
         offerRepo.save(offer6);
         offerRepo.save(offer7);
         offerRepo.save(offer8);
+
+        User user = new User();
+        user.setPassword("123");
+        user.setUsername("simo@gmail.com");
+
+        userRepo.save(user);
 
     }
 }

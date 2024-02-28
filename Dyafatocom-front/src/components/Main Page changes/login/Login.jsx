@@ -1,15 +1,48 @@
-import React from "react";
-import "./Login.css"
+import React, { useState } from "react";
+import axios from "axios"; // Import Axios
+import "./Login.css";
 import logo from "../../../assets/Assets/Images/logo.png";
+
 function Login() {
+  const [userName, setuserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    if (userName.trim() === "" || password.trim() === "") {
+      alert("Please enter userName and password");
+      return;
+    }
+
+    // Make the login request using Axios
+    axios.post('http://localhost:8080/api/auth/login', {
+      userName,
+      password
+    })
+    .then(response => {
+      // Handle successful login
+      console.log(response.data);
+    })
+    .catch(error => {
+      // Handle login error
+      console.error('Login failed:', error.response.data);
+      alert('Login failed. Please check your credentials.');
+    });
+  };
+
   return (
     <div className="screen-1">
-      <img src={logo} style={{width : "280px"}} />
+      <img src={logo} style={{ width: "280px" }} alt="Logo" />
       <div className="email">
         <label htmlFor="email">Email Address</label>
         <div className="sec-2">
           <ion-icon name="mail-outline"></ion-icon>
-          <input type="email" name="email" placeholder="Username@gmail.com" />
+          <input
+            type="email"
+            name="email"
+            placeholder="your email..."
+            value={userName}
+            onChange={(e) => setuserName(e.target.value)}
+          />
         </div>
       </div>
       <div className="password">
@@ -20,12 +53,14 @@ function Login() {
             className="pas"
             type="password"
             name="password"
-            placeholder="············"
+            placeholder="password...."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <ion-icon className="show-hide" name="eye-outline"></ion-icon>
         </div>
       </div>
-      <button className="login">Login </button>
+      <button className="login" onClick={handleLogin}>Login </button>
       <div className="footeer">
         <span>Signup</span>
         <span>Forgot Password?</span>
