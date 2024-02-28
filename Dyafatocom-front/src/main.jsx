@@ -7,6 +7,6 @@ import Home from './components/Main Page changes/Home/Home.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppTouriste />
+    <App/>
   </React.StrictMode>,
 )
