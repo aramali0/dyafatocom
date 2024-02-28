@@ -8,7 +8,7 @@ function HomePageTouriste() {
     }
     const isEmpty = false;
     return ( <>
-         {
+        {
             isEmpty ? 
             
             <div className="home-container">
