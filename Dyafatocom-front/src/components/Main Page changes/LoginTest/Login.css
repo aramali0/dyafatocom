@@ -2,15 +2,17 @@
   font-family: "Poppins";
 }
 
-.body-driss {
+body {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+   
   display: flex;
   justify-content: center;
   align-items: center;
   background: #dde5f4;
+  
 } 
 
 .screen-1 {

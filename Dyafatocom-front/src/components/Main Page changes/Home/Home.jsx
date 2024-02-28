@@ -11,6 +11,7 @@ import gallery5 from "../../../assets/Assets/Images/5.jpg";
 import gallery6 from "../../../assets/Assets/Images/6.jpg";
 import gallery7 from "../../../assets/Assets/Images/7.jpg";
 import gallery8 from "../../../assets/Assets/Images/8.jpg";
+import { Link } from "react-router-dom";
 // import NavBar from "../NavBar";
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
                 Make Memories, Live Local in Morocco!
               </p>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <button
+                <Link
                   style={{
                     backgroundColor: "#007bff",
                     color: "#fff",
@@ -38,11 +39,13 @@ export default function Home() {
                     border: "none",
                     cursor: "pointer",
                     borderRadius: "20px",
+                    textDecoration : "none"
                   }}
+                  to="/loginTourist"
                 >
                   Tourist
-                </button>
-                <button
+                </Link>
+                <Link
                   style={{
                     backgroundColor: "#28a745",
                     color: "#fff",
@@ -51,10 +54,12 @@ export default function Home() {
                     border: "none",
                     cursor: "pointer",
                     borderRadius: "20px",
+                    textDecoration : "none"
                   }}
+                  to="/loginLocal"
                 >
                   Local
-                </button>
+                </Link>
               </div>
             </div>
           </div>

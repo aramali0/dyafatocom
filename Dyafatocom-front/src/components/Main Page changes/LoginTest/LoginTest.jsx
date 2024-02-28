@@ -4,12 +4,12 @@ import "./Login.css";
 import logo from "../../../assets/Assets/Images/logo.png";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function LoginTest() {
   const [userName, setuserName] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
-  const handleLoginTemp = ()=>{
-    navigate("/othmane")
+  const navigate = useNavigate();
+  const handleLoginTouriste = ()=>{
+    navigate("/touristePage");
   }
   const handleLogin = () => {
     if (userName.trim() === "" || password.trim() === "") {
@@ -32,9 +32,8 @@ function Login() {
       alert('Login failed. Please check your credentials.');
     });
   };
-  // div classname="mt-"
+
   return (
-    <div className="body-driss">
     <div className="screen-1">
       <img src={logo} style={{ width: "280px" }} alt="Logo" />
       <div className="email">
@@ -65,14 +64,13 @@ function Login() {
           <ion-icon className="show-hide" name="eye-outline"></ion-icon>
         </div>
       </div>
-      <button className="login" onClick={handleLoginTemp}>Login </button>
+      <button className="login" onClick={handleLoginTouriste}>Login </button>
       <div className="footeer">
         <span>Signup</span>
         <span>Forgot Password?</span>
       </div>
     </div>
-    </div>
   );
 }
 
-export default Login;
+export default LoginTest;

@@ -7,19 +7,15 @@ import ProfilePage from "./profilepage/profile.page";
 
 
 function AppTouriste() {
-    return ( <>
-         <BrowserRouter>
-      <Routes>
+    return ( 
         
-        <Route path="/" element={<Layout />}>
+        <Route path="/othmane" element={<Layout />}>
           <Route index element={<HomePageTouriste />} />
           <Route path="messages" element={<MessagePage />} />
           <Route path="notifications" element={<NotificationPage />} />
           <Route path="profile" element={<ProfilePage />} />
         </Route>
-      </Routes>
-    </BrowserRouter>
-    </> );
+     );
 }
 
 export default AppTouriste;

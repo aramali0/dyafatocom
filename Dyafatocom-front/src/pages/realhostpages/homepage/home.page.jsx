@@ -11,8 +11,8 @@ function HomePageTouriste() {
         {
             !isEmpty ? 
             
-            <div className="home-container">
-                <div className="left-container">
+            <div className="home-container-pre">
+                <div className="left-container-pre">
                     <
                         ImageSlider
                         slides={[
@@ -23,7 +23,7 @@ function HomePageTouriste() {
                             ]}
                     />
                 </div>
-                <div className="right-container">
+                <div className="right-container-pre">
                     <div className="offer-title">Unforgettable Adventures Await! Join us now !</div>
                     <div className='offer-description'>Escape the ordinary and indulge in a truly exceptional family vacation at our exquisite home. We extend a warm invitation to families seeking a remarkable stay, where comfort, privacy, and cherished memories are guaranteed.</div>
                     <div className='offer-date-from'>

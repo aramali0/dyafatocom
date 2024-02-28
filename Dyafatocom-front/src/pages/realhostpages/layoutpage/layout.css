@@ -5,7 +5,7 @@
   src: url(/fonts/AstroSpace.ttf);
 }
 
-body {
+.body-lay {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -13,12 +13,12 @@ body {
 }
 
 
-body::-webkit-scrollbar {
+.body-lay::-webkit-scrollbar {
     display: none;
 }
 
 
-header {
+.host-header {
   background-color: #023e8a;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
